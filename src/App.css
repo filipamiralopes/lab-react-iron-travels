@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 1.5rem;
   text-align: center;
+  width: 100vw;
 }
 
 .logo {
@@ -35,4 +36,21 @@
 
 .text-iron {
   color: #0a035a;
+}
+
+.destinations{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  margin: 20px;
+  width: 80vw;
+}
+.destinations img{
+  width: 200px;
+  padding: 15px;
+}
+.destination-description{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
