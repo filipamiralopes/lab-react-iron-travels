@@ -3,6 +3,15 @@ import { useState } from "react";
 
 const TravelList = () => {
   const [destinations, setDestinations] = useState(travelPlansData);
+
+  function handleDeleteDestination(destId) { // filter makes a new array
+    const filteredDests = destinations.filter((dest) => {
+      if(dest.id !== destId){
+        return true
+      }
+    })
+    setDestinations(filteredDests)
+  }
   return (
     <div>
       {destinations.map((dest) => {
@@ -39,6 +48,7 @@ const TravelList = () => {
                 )}
                 {allInclusive ? <p className="blue-label">All Inclusive</p> : <p></p>}
               </div>
+              <button onClick={()=>{handleDeleteDestination(id)}}>Delete</button>
             </div>
           </div>
         );

@@ -75,3 +75,9 @@
   background-color: #77BC76;
   color: rgb(13, 13, 13);
 }
+
+.destination button{
+  width: 100px;
+  background-color: rgb(148, 141, 141);
+  margin-bottom: 15px;
+}
