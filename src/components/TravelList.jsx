@@ -4,7 +4,7 @@ import { useState } from "react";
 const TravelList = () => {
   const [destinations, setDestinations] = useState(travelPlansData);
   return (
-    <div >
+    <div>
       {destinations.map((dest) => {
         const {
           id,
@@ -17,7 +17,7 @@ const TravelList = () => {
           parts,
         } = dest;
         return (
-          <div key={id} className="destinations">
+          <div key={id} className="destination">
             <img src={image} />
 
             <div className="destination-description">
@@ -29,6 +29,16 @@ const TravelList = () => {
                 <b>Price: </b>
                 {totalCost}
               </p>
+              <div className="labels">
+                {totalCost <= 350 ? (
+                  <p className="green-label">Great Deal</p>
+                ) : totalCost >= 1500 ? (
+                  <p className="blue-label">Premium</p>
+                ) : (
+                  <p></p>
+                )}
+                {allInclusive ? <p className="blue-label">All Inclusive</p> : <p></p>}
+              </div>
             </div>
           </div>
         );
