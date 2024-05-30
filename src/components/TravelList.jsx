@@ -4,13 +4,14 @@ import { useState } from "react";
 const TravelList = () => {
   const [destinations, setDestinations] = useState(travelPlansData);
 
-  function handleDeleteDestination(destId) { // filter makes a new array
+  function handleDeleteDestination(destId) {
+    // filter makes a new array
     const filteredDests = destinations.filter((dest) => {
-      if(dest.id !== destId){
-        return true
+      if (dest.id !== destId) {
+        return true;
       }
-    })
-    setDestinations(filteredDests)
+    });
+    setDestinations(filteredDests);
   }
   return (
     <div>
@@ -46,9 +47,19 @@ const TravelList = () => {
                 ) : (
                   <p></p>
                 )}
-                {allInclusive ? <p className="blue-label">All Inclusive</p> : <p></p>}
+                {allInclusive ? (
+                  <p className="blue-label">All Inclusive</p>
+                ) : (
+                  <p></p>
+                )}
               </div>
-              <button onClick={()=>{handleDeleteDestination(id)}}>Delete</button>
+              <button
+                onClick={() => {
+                  handleDeleteDestination(id);
+                }}
+              >
+                Delete
+              </button>
             </div>
           </div>
         );

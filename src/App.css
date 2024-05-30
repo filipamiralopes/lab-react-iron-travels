@@ -43,16 +43,20 @@
   flex-direction: row;
   border: 1px solid black;
   margin: 20px;
-  width: 80vw;
+  width: 50vw;
+  align-items: center;
 }
 .destination img{
-  width: 200px;
+  width: 300px;
+  height: 200px;
   padding: 15px;
 }
 .destination-description{
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 50vw;
+  height: 35vh;
 }
 .labels {
   display: flex;
